@@ -40,7 +40,10 @@ class _DicePageState extends State<DicePage> {
             flex: 1,
             child: FlatButton(
               onPressed: () {
-                changefaces();
+                setState(() {
+                  rightnumber = Random().nextInt(6) + 1;
+                  leftnumber = Random().nextInt(6) + 1;
+                });
               },
               child: Image.asset('images/dice$leftnumber.png'),
             ),
@@ -49,7 +52,10 @@ class _DicePageState extends State<DicePage> {
             flex: 1,
             child: FlatButton(
               onPressed: () {
-                changefaces();
+                setState(() {
+                  rightnumber = Random().nextInt(6) + 1;
+                  leftnumber = Random().nextInt(6) + 1;
+                });
               },
               child: Image.asset('images/dice$rightnumber.png'),
             ),
